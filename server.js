@@ -24,8 +24,8 @@ app.get('/', (req, res) =>
  * @route POST api/users
  * @desc Register user
  */
-app.post('/api/users',
-  
+app.post(
+  '/api/users',  
   [
     check('name', 'Please enter your name')
       .not()
