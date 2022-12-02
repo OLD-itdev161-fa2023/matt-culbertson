@@ -26,9 +26,11 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <header className="App-header">
-            <h1>GoodThings</h1>
+
+      <div className="App">
+        <header className="App-header">
+          <h1>GoodThings</h1>
+
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -40,18 +42,19 @@ class App extends React.Component {
                 <Link to="/login">Login</Link>
               </li>
             </ul>
-          </header>
-          <main>
-            <Route exact path="/">
-              {this.route.data}
-            </Route>
-            <Switch>
-              <Route exact path="/register" component={Register} />
-              <Route exact path="/login" component={Login} />
-            </Switch>
-          </main>
-        </div>
-      </Router>
+        </header>
+        <main>
+          <Route exact path="/">
+            {this.state.data}
+          </Route>
+          <Switch>
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+          </Switch>
+        </main>
+      </div>
+    </Router>
+
     );
   }
 }
