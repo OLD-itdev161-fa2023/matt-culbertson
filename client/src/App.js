@@ -25,7 +25,7 @@ class App extends React.Component {
         </header>
         <main>
           <Route exact path="/">
-            {this.route.data}
+            {this.state.data}
           </Route>
           <Switch>
             <Route exact path="/register" component={Register} />
